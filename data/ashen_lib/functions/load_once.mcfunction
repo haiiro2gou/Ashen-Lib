@@ -11,6 +11,11 @@
     scoreboard objectives remove Ashen.Global.ID
 
 # Score
+    #> Const
+    # @public
+        scoreboard objectives add Ashen.Global.Const dummy
+        function ashen_lib:define_const
+
     #> Entity ID
     # @public
         scoreboard objectives add Ashen.Global.ID dummy
@@ -23,6 +28,13 @@
     #> API
     # @public
         #declare storage ashen_lib:api
+
+    #> Global
+    # @public
+        #declare storage global
+        data modify storage global Ashen.Global.Prefix.INFO set value "§3INFO >> §r"
+        data modify storage global Ashen.Global.Prefix.ERROR set value "§cERROR >> §r"
+        data modify storage global Ashen.Global.Prefix.WARN set value "§eWARN >> §r"
 
     #> Temporary
     # @public
