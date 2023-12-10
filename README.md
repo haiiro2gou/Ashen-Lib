@@ -15,7 +15,7 @@ Prerequisite Library Datapack
 
 ## 使い方 (How to use)
 
-- 導入するだけ
+他のデータパックのライブラリとしてご利用ください。
 
 ## その他 (Others)
 
@@ -26,5 +26,5 @@ Prerequisite Library Datapack
 ### 各種リンク (Contact)
 
 **Discord: haiiro2gou**  
-**Twitter: [@blanoir3298](https://twitter.com/blanoir3298)**  
+**X (Twitter): [@blanoir3298](https://twitter.com/blanoir3298)**  
 **Youtube: [はいいろ。](https://www.youtube.com/channel/UC4HoswwsCjgVmZlmhZ0Dpbg)**
