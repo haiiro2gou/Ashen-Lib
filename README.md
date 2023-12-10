@@ -15,7 +15,8 @@ Prerequisite Library Datapack
 
 ## 使い方 (How to use)
 
-他のデータパックのライブラリとしてご利用ください。
+ダウンロードして、そのまま自分のワールドの「datapacks」フォルダに入れてください。  
+Download and put it in datapacks folder of your world.
 
 ## その他 (Others)
 
