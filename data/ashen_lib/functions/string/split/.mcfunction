@@ -13,6 +13,7 @@
     execute unless data storage ashen_lib:api Argument.String run tellraw @a [{"nbt": "Ashen.Global.Prefix.ERROR", "storage": "global"}, {"translate": "Ashen.Api.Error.String", "fallback": "Missing Argument: String"}]
 
 # Exec
+    execute if data storage ashen_lib:api Argument.String run data remove storage ashen_lib:api Return
     execute if data storage ashen_lib:api Argument.String run function ashen_lib:string/split/core/
 
 # Reset

@@ -14,6 +14,7 @@
     execute unless data storage ashen_lib:api Argument.Punctuation run data modify storage ashen_lib:api Argument.Punctuation set value [""]
 
 # Exec
+    execute if data storage ashen_lib:api Argument.CharArray run data remove storage ashen_lib:api Return
     execute if data storage ashen_lib:api Argument.CharArray run function ashen_lib:string/concat/core/
 
 # Reset

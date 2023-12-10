@@ -7,4 +7,5 @@
 
 # Combine to 3 numbers
     data modify storage ashen_lib:api Argument.CharArray set from storage ashen_lib:api Return
+    data modify storage ashen_lib:api Argument.Punctuation set value ["v", "."]
     function ashen_lib:string/concat/
