@@ -1,0 +1,22 @@
+name: lint-datapack
+on:
+  push:
+    branches:
+      - 'master'
+  pull_request:
+  workflow_dispatch:
+jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Datapack Linter
+        uses: ChenCMD/datapack-linter@v2
+        with:
+          muteSuccessResult: true
