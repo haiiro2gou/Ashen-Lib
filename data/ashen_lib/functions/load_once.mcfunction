@@ -10,6 +10,14 @@
 # Reset
     scoreboard objectives remove Ashen.Global.ID
 
+# Dimension
+    #> Clipboard
+    # @public
+        #declare dimension ashen_lib:clipboard
+        #declare dimension_type ashen_lib:void
+        execute in ashen_lib:clipboard run forceload add 0 0
+        execute in ashen_lib:clipboard run setblock 0 0 0 shulker_box{Lock: "lock"}
+
 # Score
     #> Const
     # @public
