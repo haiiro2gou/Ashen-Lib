@@ -47,3 +47,7 @@
     #> Temporary
     # @public
         #declare storage ashen_lib:temp
+
+#> Dependent Datapack
+    # Index Storage
+        function indexstorage:init
