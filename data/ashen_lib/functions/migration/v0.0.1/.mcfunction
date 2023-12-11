@@ -4,4 +4,5 @@
 #
 # @within function ashen_lib:migration/
 
-data modify storage global Ashen.Lib.Version set value "v0.0.1"
+# Migration
+    data modify storage global Ashen.Lib.Version set value "v0.0.1"
