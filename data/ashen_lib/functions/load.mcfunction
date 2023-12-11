@@ -13,9 +13,3 @@
 
 # Migration
     function ashen_lib:migration/
-
-#> Dependent Packs
-# @public
-    #declare function cmdcaster:load/
-    #declare function gazerplacer:load
-    function #ashen_lib:load
