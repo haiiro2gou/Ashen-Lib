@@ -5,7 +5,7 @@
 # @within function ashen_lib:load
 
 # Version tag
-    data modify storage global Ashen.Lib.Version set value "v0.1.1"
+    data modify storage global Ashen.Lib.Version set value "v0.2.0"
 
 # Reset
     scoreboard objectives remove Ashen.Global.ID
