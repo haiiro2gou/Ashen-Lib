@@ -1,7 +1,7 @@
 {
     "replace": true,
     "values": [
-        "cmdcaster:load",
+        "cmdcaster:load/",
         "gazerplacer:load"
     ]
 }

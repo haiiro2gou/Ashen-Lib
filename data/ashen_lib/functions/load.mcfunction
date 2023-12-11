@@ -16,6 +16,6 @@
 
 #> Dependent Packs
 # @public
-    #declare function cmdcaster:load
+    #declare function cmdcaster:load/
     #declare function gazerplacer:load
     function #ashen_lib:load
