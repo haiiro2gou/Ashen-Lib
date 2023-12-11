@@ -14,7 +14,7 @@
     #> Clipboard
     # @public
         #declare dimension ashen_lib:clipboard
-        #declare dimension_type ashen_lib:void
+        #declare dimension_type ashen_lib:clipboard
         execute in ashen_lib:clipboard run forceload add 0 0
         execute in ashen_lib:clipboard run setblock 0 0 0 shulker_box{Lock: "lock"}
 

@@ -1,5 +1,5 @@
 {
-    "type": "ashen_lib:void",
+    "type": "ashen_lib:clipboard",
     "generator": {
         "type": "minecraft:flat",
         "settings": {
