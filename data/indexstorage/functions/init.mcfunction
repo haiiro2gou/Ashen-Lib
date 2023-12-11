@@ -1,7 +1,6 @@
 #> indexstorage:init
 # @within function ashen_lib:load_once
 
-
 # Scoreboard
     #> Trigger
     # @within function indexstorage:**
