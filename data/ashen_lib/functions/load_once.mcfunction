@@ -8,7 +8,7 @@
     data modify storage global Ashen.Lib.Version set value "v0.2.0"
 
 # Reset
-    scoreboard objectives remove Ashen.Global.ID
+    scoreboard objectives remove Ashen.Global.UserID
 
 # Dimension
     #> Clipboard
@@ -26,7 +26,7 @@
 
     #> User ID
     # @public
-        scoreboard objectives add Ashen.Global.ID dummy {"translate": "Ashen.Global.ScoreFirstJoin", "fallback": "Ashen Lib: User ID"}
+        scoreboard objectives add Ashen.Global.UserID dummy {"translate": "Ashen.Global.ScoreFirstJoin", "fallback": "Ashen Lib: User ID"}
 
     #> Const
     # @public
