@@ -13,3 +13,6 @@
 
 # Migration
     function ashen_lib:migration/
+
+# Dependent pack loader
+    function #ashen_lib:load
