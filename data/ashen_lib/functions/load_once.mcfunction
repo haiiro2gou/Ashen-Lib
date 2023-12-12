@@ -33,6 +33,18 @@
         scoreboard objectives add Ashen.Global.Const dummy {"translate": "Ashen.Global.ScoreConst", "fallback": "Ashen Lib: Const"}
         function ashen_lib:define_const
 
+    #> Handler
+    # @within function
+    #   ashen_lib:load_once
+    #   ashen_lib:handler/*
+    #   ashen_lib:tick/**
+        scoreboard objectives add Ashen.Lib.FirstJoin custom:play_time {"translate": "Ashen.Lib.ScoreFirstJoin", "fallback": "Ashen Lib: First Join"}
+        scoreboard objectives add Ashen.Lib.Rejoin custom:leave_game {"translate": "Ashen.Lib.ScoreRejoin", "fallback": "Ashen Lib: Rejoin"}
+        scoreboard objectives add Ashen.Lib.Death deathCount {"translate": "Ashen.Lib.ScoreDeath", "fallback": "Ashen Lib: Death"}
+        scoreboard objectives add Ashen.Lib.Respawn custom:time_since_death {"translate": "Ashen.Lib.ScoreRespawn", "fallback": "Ashen Lib: Respawn"}
+        scoreboard objectives add Ashen.Lib.Sneak custom:sneak_time {"translate": "Ashen.Lib.ScoreSneak", "fallback": "Ashen Lib: Sneak"}
+        scoreboard objectives add Ashen.Lib.Drop custom:drop {"translate": "Ashen.Lib.ScoreDrop", "fallback": "Ashen Lib: Drop Item"}
+
     #> Temporary
     # @public
         scoreboard objectives add Ashen.Global.Temporary dummy {"translate": "Ashen.Global.ScoreTemporary", "fallback": "Ashen Lib: Temp"}

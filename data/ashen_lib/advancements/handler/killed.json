@@ -1,0 +1,13 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:location"
+        }
+    }
+}{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:location"
+        }
+    }
+}
