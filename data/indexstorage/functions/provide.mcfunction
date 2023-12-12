@@ -3,12 +3,8 @@
 
 #> private
 # @private
-    #declare score_holder #Count
+    #declare score_holder #StorageIDIndex
 
 # ID Provide
-    execute unless score @s Ashen.Global.ID matches -2147483648..2147483647 store result score #Count Ashen.Global.Temporary run data get storage indexstorage: Count
-    execute unless score @s Ashen.Global.ID matches -2147483648..2147483647 run scoreboard players add #Count Ashen.Global.Temporary 1
-    execute unless score @s Ashen.Global.ID matches -2147483648..2147483647 run scoreboard players operation @s Ashen.Global.ID = #Count Ashen.Global.Temporary
-
-# Reset
-    scoreboard players reset #Count Ashen.Global.Temporary
+    execute unless score @s Ashen.IndexStorage.ID matches -2147483648..2147483647 run scoreboard players add #StorageIDIndex Ashen.Global.Global 1
+    execute unless score @s Ashen.IndexStorage.ID matches -2147483648..2147483647 run scoreboard players operation @s Ashen.IndexStorage.ID = #StorageIDIndex Ashen.Global.Global
