@@ -15,9 +15,9 @@
     execute if entity @s[scores={Ashen.Lib.Death=1..}] run tag @s add Death
 
 # handler
-    execute if entity @s[scores={Ashen.Lib.FirstJoin=1..}] run function ashen_lib:handler/first_join
+    execute if entity @s[scores={Ashen.Lib.FirstJoin=1}] run function ashen_lib:handler/first_join
     execute if entity @s[scores={Ashen.Lib.Rejoin=1..}] run function ashen_lib:handler/rejoin
-    execute if entity @s[scores={Ashen.Lib.Respawn=1..}] run function ashen_lib:handler/respawn
+    execute if entity @s[scores={Ashen.Lib.Respawn=1}] run function ashen_lib:handler/respawn
     execute if entity @s[scores={Ashen.Lib.Sneak=1..},predicate=ashen_lib:is_sneaking] run function ashen_lib:handler/sneak
     execute if entity @s[advancements={ashen_lib:handler/consume_item=true}] run function ashen_lib:handler/consume_item
     execute if entity @s[advancements={ashen_lib:handler/killed=true}] run function ashen_lib:handler/killed

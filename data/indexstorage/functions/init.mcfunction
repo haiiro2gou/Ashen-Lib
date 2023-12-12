@@ -1,9 +1,6 @@
 #> indexstorage:init
 # @within function ashen_lib:load_once
 
-# Reset
-    scoreboard objectives remove Ashen.IndexStorage.ID
-
 # Scoreboard
     #> Trigger
     # @within function indexstorage:**
