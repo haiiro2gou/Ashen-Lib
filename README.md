@@ -22,7 +22,9 @@ Download and put it in datapacks folder of your world.
 
 ### ライセンス (License)
 
-[Apache-2.0 License](LICENSE)が適用されています。
+以下のディレクトリを除き[Apache-2.0 License](LICENSE)が適用されています。
+
+「[data/ashen_lib/functions/string/split](data/ashen_lib/functions/string/split/)」ディレクトリ ([MIT License](data/ashen_lib/functions/string/split/LICENSE) / Copyright by 赤石愛)
 
 ### 各種リンク (Contact)
 
