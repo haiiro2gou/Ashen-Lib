@@ -7,7 +7,6 @@
 
 #> Val
 # @private
-    #declare score_holder #DepriveID
     #declare score_holder #UnusedCount
     #declare score_holder #MergedUnusedCount
 
