@@ -1,11 +1,14 @@
 #> indexstorage:push/
+# @input as player
+#   score @s Ashen.IndexStorage.ID
+#   storage
+#       indexstorage:
+#           _ : component
 # @api
 
-# Validate
-    execute unless data storage indexstorage: Config run tellraw @a [{"nbt": "Ashen.Global.Prefix.ERROR", "storage": "global"}, {"translate": "Ashen.Error.IndexStorage.NoConfig", "fallback": "Config data could not be found"}]
+# validate
+    execute unless score @s Ashen.IndexStorage.ID matches 0.. run function indexstorage:provide/
 
-# Exec
-    execute if data storage indexstorage: Config run function indexstorage:push/core/ with storage indexstorage: Config
-
-# Reset
-    data remove storage indexstorage: Config
+# push
+    execute store result storage indexstorage:core m.id int 1 run scoreboard players get @s Ashen.IndexStorage.ID
+    function indexstorage:push/.m with storage indexstorage:core m

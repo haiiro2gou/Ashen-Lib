@@ -65,6 +65,25 @@
     # @public
         #declare storage ashen_lib:temp
 
-#> Dependent Datapack
-    # Index Storage
-        function indexstorage:init
+#> Index Storage
+    #> Tag
+    # @public
+        #declare tag Ashen.IndexStorage.HasStorage
+
+    #> Trigger
+    # @within function indexstorage:**
+        scoreboard objectives add Ashen.IndexStorage.ID trigger {"translate": "Ashen.IndexStorage.StorageID", "fallback": "Index Storage: Storage ID"}
+
+    #> Score Holder
+    # @within function
+    #   ashen_lib:load_once
+    #   indexstorage:**
+        #declare score_holder #GCInterval
+        #declare score_holder #StorageIDIndex
+        scoreboard players set #GCInterval Ashen.Global.Global 1200
+        scoreboard players set #StorageIDIndex Ashen.Global.Global -1
+
+    #> Storage
+    # @within function **
+        #declare storage indexstorage:
+        #declare storage indexstorage:core

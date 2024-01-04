@@ -1,12 +1,11 @@
 #> indexstorage:pull/
+# @input as player
+#   score @s Ashen.IndexStorage.ID
 # @api
 
-# Validate
-    execute unless data storage indexstorage: ID run function indexstorage:provide
-    execute unless data storage indexstorage: ID store result storage indexstorage: ID int 1 run scoreboard players get @s Ashen.IndexStorage.ID
+# validate
+    execute unless score @s Ashen.IndexStorage.ID matches 0.. run function indexstorage:provide/
 
-# Exec
-    execute if data storage indexstorage: ID run function indexstorage:pull/core/
-
-# Reset
-    data remove storage indexstorage: ID
+# データを回収する
+    execute store result storage indexstorage:core m.id int 1 run scoreboard players get @s Ashen.IndexStorage.ID
+    function indexstorage:pull/.m with storage indexstorage:core m

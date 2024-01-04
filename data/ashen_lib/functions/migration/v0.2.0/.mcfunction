@@ -6,5 +6,4 @@
 
 #> from: 6151a064b3b452c562c8bbc25e3d075555e0fd86
 # @private
-    #declare function indexstorage:init
-    function indexstorage:init
+    # function indexstorage:init
