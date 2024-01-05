@@ -82,7 +82,7 @@
     #   ashen_lib:handler/first_join
     #   ashen_lib:tick/
     #   indexstorage:**
-        scoreboard objectives add Ashen.IndexStorage.ID trigger {"translate": "Ashen.IndexStorage.StorageID", "fallback": "Index Storage: Storage ID"}
+        scoreboard objectives add Ashen.IndexStorage.ID dummy {"translate": "Ashen.IndexStorage.StorageID", "fallback": "Index Storage: Storage ID"}
 
     #> Score Holder
     # @within function
