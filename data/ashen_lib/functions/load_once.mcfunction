@@ -27,6 +27,13 @@
     #> User ID
     # @public
         scoreboard objectives add Ashen.Global.UserID dummy {"translate": "Ashen.Global.ScoreFirstJoin", "fallback": "Ashen Lib: User ID"}
+        #> Random
+        # @private
+            #declare tag Random
+            summon area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["Random"]}
+            execute store result score #Random.Base Ashen.Global.Global run data get entity @e[tag=Random,limit=1] UUID[1]
+            execute store result score #Random.Carry Ashen.Global.Global run data get entity @e[tag=Random,limit=1] UUID[3]
+            kill @e[tag=Random,limit=1]
 
     #> Const
     # @public
@@ -83,8 +90,8 @@
     #   indexstorage:**
         #declare score_holder #GCInterval
         #declare score_holder #StorageIDIndex
-        scoreboard players set #GCInterval Ashen.Global.Global 1200
-        execute unless score #StorageIDIndex Ashen.Global.Temporary matches 0.. run scoreboard players set #StorageIDIndex Ashen.Global.Global -1
+        scoreboard players set #GCInterval Ashen.Global.Global 20
+        execute unless score #StorageIDIndex Ashen.Global.Global matches 0.. run scoreboard players set #StorageIDIndex Ashen.Global.Global -1
 
     #> Storage
     # @within function **

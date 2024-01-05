@@ -202,3 +202,6 @@ scoreboard players set #97 Ashen.Global.Const 97
 scoreboard players set #98 Ashen.Global.Const 98
 scoreboard players set #99 Ashen.Global.Const 99
 scoreboard players set #100 Ashen.Global.Const 100
+
+scoreboard players set #31743 Ashen.Global.Const 31743
+scoreboard players set #65536 Ashen.Global.Const 65536
