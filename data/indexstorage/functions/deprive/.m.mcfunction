@@ -25,3 +25,4 @@
 # リセット
     scoreboard players reset #UnusedCount Ashen.Global.Temporary
     scoreboard players reset #MergedUnusedCount Ashen.Global.Temporary
+    data remove storage indexstorage:core temp

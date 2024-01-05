@@ -14,4 +14,5 @@
     function indexstorage:push/.m with storage indexstorage:core m
 
 # reset
+    data remove storage indexstorage: _
     data remove storage indexstorage:core m
