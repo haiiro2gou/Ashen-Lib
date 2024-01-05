@@ -12,20 +12,29 @@
     scoreboard players operation #LatestGC Ashen.Global.Temporary -= #CurrentTime Ashen.Global.Temporary
     scoreboard players operation #LatestGC Ashen.Global.Temporary *= #-1 Ashen.Global.Const
 
+    title @a actionbar [{"score":{"name":"#LatestGC","objective":"Ashen.Global.Temporary"}},{"text":" / "},{"score":{"name":"#GCInterval","objective":"Ashen.Global.Global"}}]
+
 # (#GCDuration)tick経過していたらgcループを発火
     # 存在しないデータを削除
-        execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global run scoreboard players set #GCIndex Ashen.IndexStorage.ID -1
+        execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global run scoreboard players set #GCIndex Ashen.Global.Temporary -1
         execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global run function indexstorage:gc/main/loop
-        execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global store result storage indexstorage:core LatestGC int 1 run scoreboard players get #CurrentTime Ashen.Global.Temporary
     # 配列のリサイズ
-        execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global run scoreboard players operation #ResizeIndex Ashen.Global.Temporary = #StorageIDIndex Ashen.Global.Global
-        execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global run scoreboard players set #StorageIDIndex Ashen.Global.Global -1
-        execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global run scoreboard players operation #StorageIDIndex Ashen.Global.Global > * Ashen.IndexStorage.ID
-        execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global run scoreboard players operation #ResizeIndex Ashen.Global.Temporary -= #StorageIDIndex Ashen.Global.Global
-        execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global if score #ResizeIndex Ashen.Global.Temporary matches 1.. run function indexstorage:gc/resize/loop
+        # 現存するエンティティの中のIDの最大値を取得
+            execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global run scoreboard players operation #ResizeIndex Ashen.Global.Temporary = #StorageIDIndex Ashen.Global.Global
+            execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global run scoreboard players set #StorageIDIndex Ashen.Global.Global -1
+            execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global run scoreboard players operation #StorageIDIndex Ashen.Global.Global > * Ashen.IndexStorage.ID
+        # データの整理
+            execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global if score #ResizeIndex Ashen.Global.Temporary > #StorageIDIndex Ashen.Global.Global run function indexstorage:gc/resize/data
+        # 削除済みIDの整理
+            execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global run data modify storage indexstorage:core temp set from storage indexstorage:core UnusedID
+            execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global run data modify storage indexstorage:core UnusedID set value []
+            execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global if data storage indexstorage:core temp[-1] run function indexstorage:gc/resize/id
+    # 実行時刻を記録
+        execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global store result storage indexstorage:core LatestGC int 1 run scoreboard players get #CurrentTime Ashen.Global.Temporary
 
 # リセット
+    data remove storage indexstorage:core temp
     scoreboard players reset #CurrentTime Ashen.Global.Temporary
     scoreboard players reset #LatestGC Ashen.Global.Temporary
-    scoreboard players reset #GCIndex Ashen.IndexStorage.ID
+    scoreboard players reset #GCIndex Ashen.Global.Temporary
     scoreboard players reset #ResizeIndex Ashen.Global.Temporary

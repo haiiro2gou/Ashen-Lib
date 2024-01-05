@@ -10,5 +10,5 @@
 #> GC resize
 # @within function
 #   indexstorage:tick
-#   indexstorage:gc/resize/loop
+#   indexstorage:gc/resize/data
     #declare score_holder #ResizeIndex

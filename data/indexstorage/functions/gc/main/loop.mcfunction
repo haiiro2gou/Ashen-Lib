@@ -4,8 +4,8 @@
 #   indexstorage:gc/main/loop
 
 # 1加える
-    execute store result storage indexstorage:core m.id int 1 run scoreboard players add #GCIndex Ashen.IndexStorage.ID 1
-    execute if score #GCIndex Ashen.IndexStorage.ID > #StorageIDIndex Ashen.Global.Global run return 0
+    execute store result storage indexstorage:core m.id int 1 run scoreboard players add #GCIndex Ashen.Global.Temporary 1
+    execute if score #GCIndex Ashen.Global.Temporary > #StorageIDIndex Ashen.Global.Global run return 0
 
 # 存在しなければ削除
     function indexstorage:gc/main/copy.m with storage indexstorage:core m
