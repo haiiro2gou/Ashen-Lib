@@ -1,4 +1,4 @@
-#> indexstorage:provide
+#> indexstorage:provide/
 # @api
 
 # 未使用idチェック
