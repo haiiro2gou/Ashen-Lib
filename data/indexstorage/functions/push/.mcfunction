@@ -12,3 +12,6 @@
 # push
     execute store result storage indexstorage:core m.id int 1 run scoreboard players get @s Ashen.IndexStorage.ID
     function indexstorage:push/.m with storage indexstorage:core m
+
+# reset
+    data remove storage indexstorage:core m

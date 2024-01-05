@@ -18,4 +18,5 @@
 
 # リセット
     kill 0-0-0-0-1
+    data remove storage indexstorage:core m
     tag @s remove Ashen.IndexStorage.Temp

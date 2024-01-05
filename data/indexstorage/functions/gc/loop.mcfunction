@@ -11,5 +11,8 @@
     function indexstorage:gc/copy.m with storage indexstorage:core m
     function indexstorage:gc/exec.m with storage indexstorage:core m
 
+# reset
+    data remove storage indexstorage:core m
+
 # ループを入れる
     function indexstorage:gc/loop
