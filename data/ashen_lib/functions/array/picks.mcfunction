@@ -25,7 +25,7 @@
         data modify storage ashen_lib:api ArrayTemp set from storage ashen_lib:api Array
         data modify storage ashen_lib:api Array set from storage ashen_lib:api Picks
     # ソート
-        function ashen_lib:array/sort_ascend
+        function ashen_lib:array/sort/ascend
     # 配列を元に戻す
         data modify storage ashen_lib:api Picks set from storage ashen_lib:api Array
         data modify storage ashen_lib:api Array set from storage ashen_lib:api ArrayTemp
