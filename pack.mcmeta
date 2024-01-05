@@ -1,9 +1,9 @@
 {
     "pack": {
-        "pack_format": 18,
+        "pack_format": 26,
         "supported_formats": {
             "max_inclusive": 26,
-            "min_inclusive": 18
+            "min_inclusive": 26
         },
         "description": "Prerequisite Library by haiiro2gou"
     }
