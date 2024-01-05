@@ -10,7 +10,7 @@
     scoreboard players operation @s Ashen.Global.UserID = #UserIDIndex Ashen.Global.Global
 
 # Storage
-    function indexstorage:provide/
+    execute unless score @s Ashen.IndexStorage.ID matches 0.. run function indexstorage:provide/
 
 # Prevention of respawn event
     scoreboard players set @s Ashen.Lib.Respawn 81

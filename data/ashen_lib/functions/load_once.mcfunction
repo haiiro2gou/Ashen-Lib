@@ -71,7 +71,10 @@
         #declare tag Ashen.IndexStorage.HasStorage
 
     #> Trigger
-    # @within function indexstorage:**
+    # @within function
+    #   ashen_lib:handler/first_join
+    #   ashen_lib:tick/
+    #   indexstorage:**
         scoreboard objectives add Ashen.IndexStorage.ID trigger {"translate": "Ashen.IndexStorage.StorageID", "fallback": "Index Storage: Storage ID"}
 
     #> Score Holder
@@ -81,7 +84,7 @@
         #declare score_holder #GCInterval
         #declare score_holder #StorageIDIndex
         scoreboard players set #GCInterval Ashen.Global.Global 1200
-        scoreboard players set #StorageIDIndex Ashen.Global.Global -1
+        execute unless score #StorageIDIndex Ashen.Global.Temporary matches 0.. run scoreboard players set #StorageIDIndex Ashen.Global.Global -1
 
     #> Storage
     # @within function **
