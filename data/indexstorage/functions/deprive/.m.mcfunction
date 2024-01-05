@@ -11,13 +11,13 @@
     #declare score_holder #MergedUnusedCount
 
 # 削除済みかチェック
-    execute store result score #UnusedCount Ashen.Global.Temporary run data get storage indexstorage:core UnusedID
+    execute store result score #UnusedCount Ashen.Global.Temporary if data storage indexstorage:core UnusedID[]
     data modify storage indexstorage:core temp set from storage indexstorage:core UnusedID
     $execute store result score #MergedUnusedCount Ashen.Global.Temporary run data modify storage indexstorage:core temp[] set value $(id)
 
 # 削除済みidに登録
     execute unless data storage indexstorage:core UnusedID[-1] run data modify storage indexstorage:core UnusedID append from storage indexstorage:core temp[-1]
-    execute if score #UnusedCount Ashen.Global.Temporary = #MergedUnusedCount Ashen.Global.Temporary run data modify storage indexstorage:core UnusedID append from storage indexstorage:core UnusedID[-1]
+    execute if data storage indexstorage:core UnusedID[-1] if score #UnusedCount Ashen.Global.Temporary = #MergedUnusedCount Ashen.Global.Temporary run data modify storage indexstorage:core UnusedID append from storage indexstorage:core temp[-1]
 
 # 削除
     $data modify storage indexstorage: data[$(id)] set value {}
