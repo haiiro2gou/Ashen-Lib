@@ -12,8 +12,6 @@
     scoreboard players operation #LatestGC Ashen.Global.Temporary -= #CurrentTime Ashen.Global.Temporary
     scoreboard players operation #LatestGC Ashen.Global.Temporary *= #-1 Ashen.Global.Const
 
-    title @a actionbar [{"score":{"name":"#LatestGC","objective":"Ashen.Global.Temporary"}},{"text":" / "},{"score":{"name":"#GCInterval","objective":"Ashen.Global.Global"}}]
-
 # (#GCDuration)tick経過していたらgcループを発火
     # 存在しないデータを削除
         execute if score #LatestGC Ashen.Global.Temporary >= #GCInterval Ashen.Global.Global run scoreboard players set #GCIndex Ashen.Global.Temporary -1
