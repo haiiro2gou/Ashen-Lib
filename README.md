@@ -11,7 +11,7 @@ Prerequisite Library Datapack
 
 ## 対応バージョン (Versions)
 
-- 1.20.2+
+- 1.20.4 (1.20.3)
 
 ## 使い方 (How to use)
 
