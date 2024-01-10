@@ -11,8 +11,7 @@ Prerequisite Library Datapack
 
 ## 対応バージョン (Versions)
 
-- 1.20.2
-- 1.20.3 (1.20.4)
+- 1.20.2+
 
 ## 使い方 (How to use)
 
@@ -25,7 +24,22 @@ Download and put it in datapacks folder of your world.
 
 以下のディレクトリを除き[Apache-2.0 License](LICENSE)が適用されています。
 
-[data/ashen_lib/functions/string/split](data/ashen_lib/functions/string/split/)ディレクトリ ([MIT License](data/ashen_lib/functions/string/split/LICENSE) / Copyright by 赤石愛)
+- [data/ashen_lib/functions/array/sort](data/ashen_lib/functions/array/sort/)ディレクトリ ([MIT License](data/ashen_lib/functions/array/sort/LICENSE) / Copyright by 赤石愛)
+- [data/ashen_lib/functions/string/split](data/ashen_lib/functions/string/split/)ディレクトリ ([MIT License](data/ashen_lib/functions/string/split/LICENSE) / Copyright by 赤石愛)
+- [data/indexstorage](data/indexstorage/functions/)ディレクトリ ([Apache-2.0 License](data/indexstorage/LICENSE) / Copyright by はいいろ)
+
+### 謝辞 (Special Thanks)
+
+このリポジトリでは、以下のライブラリを利用しています。
+
+#### [はいいろ](https://x.com/blanoir3298)
+
+- [IndexStorage](https://github.com/haiiro2gou/IndexStorage)
+
+#### [赤石愛](https://x.com/AiAkaishi) 様
+
+- [AiUtil](https://github.com/Ai-Akaishi/AiUtil)
+- [NaturalMergeSort](https://github.com/Ai-Akaishi/NaturalMergeSort)
 
 ### 各種リンク (Contact)
 
