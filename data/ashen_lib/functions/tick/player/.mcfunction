@@ -29,5 +29,5 @@
     function #ashen_lib:tick/player/
 
 # Reset
-    tag @s remove this
     function ashen_lib:tick/player/reset
+    tag @s remove this
