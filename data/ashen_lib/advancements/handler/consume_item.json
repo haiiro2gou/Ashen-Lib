@@ -1,7 +1,10 @@
 {
     "criteria": {
         "requirement": {
-            "trigger": "minecraft:location"
+            "trigger": "consume_item"
         }
+    },
+    "rewards": {
+        "function": "ashen_lib:handler/consume_item"
     }
 }

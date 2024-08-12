@@ -1,13 +1,10 @@
 {
     "criteria": {
         "requirement": {
-            "trigger": "minecraft:location"
+            "trigger": "player_killed_entity"
         }
-    }
-}{
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:location"
-        }
+    },
+    "rewards": {
+        "function": "ashen_lib:handler/killed"
     }
 }
