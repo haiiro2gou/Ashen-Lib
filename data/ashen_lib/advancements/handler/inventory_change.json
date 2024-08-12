@@ -3,8 +3,5 @@
         "requirement": {
             "trigger": "inventory_changed"
         }
-    },
-    "rewards": {
-        "function": "ashen_lib:handler/inventory_change"
     }
 }

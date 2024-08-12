@@ -3,8 +3,5 @@
         "requirement": {
             "trigger": "consume_item"
         }
-    },
-    "rewards": {
-        "function": "ashen_lib:handler/consume_item"
     }
 }

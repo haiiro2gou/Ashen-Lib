@@ -1,7 +1,5 @@
 #> ashen_lib:handler/inventory_change
-# @within
-#   advancement ashen_lib:handler/inventory_change
-#   function ashen_lib:tick/player/
+# @within function ashen_lib:tick/player/
 
 # reset
     advancement revoke @s only ashen_lib:handler/inventory_change
