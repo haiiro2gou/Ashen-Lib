@@ -1,5 +1,7 @@
 #> ashen_lib:handler/consume_item
-# @within function ashen_lib:tick/player/
+# @within
+#   advancement ashen_lib:handler/consume_item
+#   function ashen_lib:tick/player/
 
 # trigger it
     tag @s add Ashen.Lib.UseItem

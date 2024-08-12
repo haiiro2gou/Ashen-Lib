@@ -1,5 +1,7 @@
 #> ashen_lib:handler/using_item
-# @within function ashen_lib:tick/player/
+# @within
+#   advancement ashen_lib:handler/using_item
+#   function ashen_lib:tick/player/
 
 # trigger it
     tag @s add Ashen.Lib.UsingItem
@@ -8,4 +10,3 @@
 
 # load dependents
     function #ashen_lib:handler/using_item
-    
