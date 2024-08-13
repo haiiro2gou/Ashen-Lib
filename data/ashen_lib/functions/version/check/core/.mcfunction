@@ -10,17 +10,17 @@
     scoreboard players set #CheckVersion Ashen.Global.Temporary 1
 
 # Get Version Tags
-    data modify storage ashen_lib:api Argument.Version set from storage ashen_lib:api Argument.TargetVersion
+    data modify storage ashen_lib:api Argument.VersionTag set from storage ashen_lib:api Argument.TargetVersion
     function ashen_lib:version/parse/
-    data modify storage ashen_lib:temp version.target set from storage ashen_lib:api Return
+    data modify storage ashen_lib:temp version.target set from storage ashen_lib:api Return.Version
 
-    data modify storage ashen_lib:api Argument.Version set from storage ashen_lib:api Argument.TargetVersion
+    data modify storage ashen_lib:api Argument.VersionTag set from storage ashen_lib:api Argument.TargetVersion
     function ashen_lib:version/parse/
-    data modify storage ashen_lib:temp version.min set from storage ashen_lib:api Return
+    data modify storage ashen_lib:temp version.min set from storage ashen_lib:api Return.Version
 
-    execute if data storage ashen_lib:api Argument.MaxVersion run data modify storage ashen_lib:api Argument.Version set from storage ashen_lib:api Argument.TargetVersion
+    execute if data storage ashen_lib:api Argument.MaxVersion run data modify storage ashen_lib:api Argument.VersionTag set from storage ashen_lib:api Argument.TargetVersion
     execute if data storage ashen_lib:api Argument.MaxVersion run function ashen_lib:version/parse/
-    execute if data storage ashen_lib:api Argument.MaxVersion run data modify storage ashen_lib:temp version.max set from storage ashen_lib:api Return
+    execute if data storage ashen_lib:api Argument.MaxVersion run data modify storage ashen_lib:temp version.max set from storage ashen_lib:api Return.Version
 
 # Validate Version
     execute store result score #TargetLength Ashen.Global.Temporary if data storage ashen_lib:temp version.target[]

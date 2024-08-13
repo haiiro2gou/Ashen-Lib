@@ -5,7 +5,7 @@
     data remove storage ashen_lib:api Return
 
 # Split by one
-    data modify storage ashen_lib:api Argument.String set from storage ashen_lib:api Argument.Version
+    data modify storage ashen_lib:api Argument.String set from storage ashen_lib:api Argument.VersionTag
     function ashen_lib:string/split/
 
 # Combine to 3 version numeral strings
@@ -15,16 +15,9 @@
 
 # Convert strings to int array
     data modify storage ashen_lib:temp version.str set from storage ashen_lib:api Return
-    data modify storage ashen_lib:api Argument.String set from storage ashen_lib:temp version.str[0]
-    function ashen_lib:string/convert/int/
-    data modify storage ashen_lib:temp version.int append from storage ashen_lib:api Return
-    data modify storage ashen_lib:api Argument.String set from storage ashen_lib:temp version.str[1]
-    function ashen_lib:string/convert/int/
-    data modify storage ashen_lib:temp version.int append from storage ashen_lib:api Return
-    data modify storage ashen_lib:api Argument.String set from storage ashen_lib:temp version.str[2]
-    function ashen_lib:string/convert/int/
-    data modify storage ashen_lib:temp version.int append from storage ashen_lib:api Return
+    execute if data storage ashen_lib:temp version.str[0] run function ashen_lib:version/parse/core/s_to_i
 
 # Complete
-    data modify storage ashen_lib:api Return set from storage ashen_lib:temp version.int
-    data remove storage ashen_lib:temp version
+    data modify storage ashen_lib:api Return.Version set from storage ashen_lib:temp version.int
+    data remove storage ashen_lib:temp version.str
+    data remove storage ashen_lib:temp version.int

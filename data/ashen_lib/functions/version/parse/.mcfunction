@@ -4,17 +4,17 @@
 #
 # @input storage
 #   ashen_lib:api Argument
-#       Version : string
+#       VersionTag : string
 # @output storage
-#   ashen_lib:api Argument
-#       Return : int[]
+#   ashen_lib:api Return
+#       Version : int[]
 # @api
 
 # Validate
-    execute unless data storage ashen_lib:api Argument.Version run tellraw @a [{"nbt": "Ashen.Global.Prefix.ERROR", "storage": "global"},{"translate": "Ashen.Api.Error.Version", "fallback": "Missing Argument: Version"}]
+    execute unless data storage ashen_lib:api Argument.VersionTag run tellraw @a [{"nbt": "Ashen.Global.Prefix.ERROR", "storage": "global"},{"translate": "Ashen.Api.Error.Version", "fallback": "Missing Argument: Version"}]
 
 # Exec
-    execute if data storage ashen_lib:api Argument.Version run function ashen_lib:version/parse/core/
+    execute if data storage ashen_lib:api Argument.VersionTag run function ashen_lib:version/parse/core/
 
 # Reset
-    data remove storage ashen_lib:api Argument.Version
+    data remove storage ashen_lib:api Argument.VersionTag
