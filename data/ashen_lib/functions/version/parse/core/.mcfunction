@@ -1,5 +1,5 @@
-#> ashen_lib:version/parser/core/
-# @within function ashen_lib:version/parser/
+#> ashen_lib:version/parse/core/
+# @within function ashen_lib:version/parse/
 
 # Clear result storage
     data remove storage ashen_lib:api Return

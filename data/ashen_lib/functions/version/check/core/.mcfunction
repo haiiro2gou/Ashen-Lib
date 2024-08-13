@@ -16,7 +16,7 @@
 
 # Get Target Version
     data modify storage ashen_lib:api Argument.Version set from storage ashen_lib:api Argument.TargetVersion
-    function ashen_lib:version/parser/
+    function ashen_lib:version/parse/
     execute store result score #TargetMajor Ashen.Global.Temporary run data get storage ashen_lib:api Return[0] 1
     execute store result score #TargetMinor Ashen.Global.Temporary run data get storage ashen_lib:api Return[1] 1
     execute store result score #TargetPatch Ashen.Global.Temporary run data get storage ashen_lib:api Return[2] 1
@@ -31,7 +31,7 @@
     execute if score #CompMajor Ashen.Global.Temporary <= #TargetMajor Ashen.Global.Temporary if score #CompMinor Ashen.Global.Temporary <= #TargetMinor Ashen.Global.Temporary unless score #CompPatch Ashen.Global.Temporary <= #TargetPatch Ashen.Global.Temporary run scoreboard players set #CheckVersion Ashen.Global.Temporary 0
 
     execute unless data storage ashen_lib:api Argument{MaxVersion: "inf"} run data modify storage ashen_lib:api Argument.Version set from storage ashen_lib:api Argument.MaxVersion
-    execute unless data storage ashen_lib:api Argument{MaxVersion: "inf"} run function ashen_lib:version/parser/
+    execute unless data storage ashen_lib:api Argument{MaxVersion: "inf"} run function ashen_lib:version/parse/
     execute unless data storage ashen_lib:api Argument{MaxVersion: "inf"} store result score #CompMajor Ashen.Global.Temporary run data get storage ashen_lib:api Return[0]
     execute unless data storage ashen_lib:api Argument{MaxVersion: "inf"} store result score #CompMinor Ashen.Global.Temporary run data get storage ashen_lib:api Return[1]
     execute unless data storage ashen_lib:api Argument{MaxVersion: "inf"} store result score #CompPatch Ashen.Global.Temporary run data get storage ashen_lib:api Return[2]

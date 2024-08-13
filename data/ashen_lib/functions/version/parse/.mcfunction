@@ -1,4 +1,4 @@
-#> ashen_lib:version/parser/
+#> ashen_lib:version/parse/
 #
 # Convert version notation string into numerical array
 #
@@ -14,7 +14,7 @@
     execute unless data storage ashen_lib:api Argument.Version run tellraw @a [{"nbt": "Ashen.Global.Prefix.ERROR", "storage": "global"},{"translate": "Ashen.Api.Error.Version", "fallback": "Missing Argument: Version"}]
 
 # Exec
-    execute if data storage ashen_lib:api Argument.Version run function ashen_lib:version/parser/core/
+    execute if data storage ashen_lib:api Argument.Version run function ashen_lib:version/parse/core/
 
 # Reset
     data remove storage ashen_lib:api Argument.Version
