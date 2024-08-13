@@ -4,4 +4,4 @@
 #> Tag
 # @within function
 #   indexstorage:provide/*
-    #declare tag Ashen.IndexStorage.Temp
+    #declare tag ProvideStorage
