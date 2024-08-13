@@ -139,22 +139,10 @@
         "master"
     ],
     "git.branchProtectionPrompt": "alwaysPrompt",
-    "gitmoji.addCustomEmoji": [
-        {
-            "code": ":balance_scale:",
-            "emoji": "⚖️",
-            "description": "Corrections regarding balance adjustment",
-            "description_zh_cn": ""
-        }
-    ],
     "git-graph.customEmojiShortcodeMappings": [
         {
             "shortcode": ":technologist:",
             "emoji": "🧑‍💻"
-        },
-        {
-            "shortcode": ":balance_scale:",
-            "emoji": "⚖️"
         }
-    ]
+    ],
 }

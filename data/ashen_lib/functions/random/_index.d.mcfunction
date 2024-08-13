@@ -4,6 +4,6 @@
 #> rng
 # @within function
 #   ashen_lib:random/*
-#   ashen_lib:load_once
+#   ashen_lib:load/once
     #declare score_holder #Random.Base
     #declare score_holder #Random.Carry

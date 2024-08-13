@@ -1,5 +1,5 @@
-#> ashen_lib:define_const
-# @within function ashen_lib:load_once
+#> ashen_lib:load/define_const
+# @within function ashen_lib:load/once
 
 scoreboard players set #-100 Ashen.Global.Const -100
 scoreboard players set #-99 Ashen.Global.Const -99

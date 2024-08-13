@@ -1,13 +1,7 @@
 {
     "criteria": {
         "requirement": {
-            "trigger": "minecraft:location"
-        }
-    }
-}{
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:location"
+            "trigger": "player_killed_entity"
         }
     }
 }
