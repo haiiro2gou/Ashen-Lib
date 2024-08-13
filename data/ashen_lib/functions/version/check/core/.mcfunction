@@ -41,3 +41,6 @@
     scoreboard players reset #CheckVersion Ashen.Global.Temporary
     scoreboard players reset #TargetLength Ashen.Global.Temporary
     scoreboard players reset #CompLength Ashen.Global.Temporary
+    data remove storage ashen_lib:temp version.target
+    data remove storage ashen_lib:temp version.min
+    data remove storage ashen_lib:temp version.max
